@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Me contacter · Anaëlle Relectrice</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .contact-box, .offre-box {
+    background: var(--bleu);
+    border-radius: 18px;
+    padding: 2.5rem 2.25rem;
+  }
+
+  .contact-box h2, .offre-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .contact-item {
+    margin-bottom: 1.75rem;
+    text-align: center;
+  }
+
+  .contact-item:last-child { margin-bottom: 0; }
+
+  .contact-item strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--noir);
+    margin-bottom: 0.35rem;
+  }
+
+  .contact-item a {
+    color: var(--noir);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .contact-item a:hover { color: var(--bleu-fonce); }
+
+  .contact-item small {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--gris);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+
+  .offre-box p {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: var(--gris);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .offre-box strong {
+    color: var(--noir);
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  .offre-box a { color: var(--noir); font-weight: 500; text-decoration: underline; }
+  .offre-box a:hover { color: var(--bleu-fonce); }
+
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(143,170,184,0.4);
+    margin: 1.5rem 0;
+  }
+
+  @media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Anaëlle · <span>Relectrice</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="formules.html">Formules</a></li>
+    <li><a href="avis.html">Avis</a></li>
+    <li><a href="contact.html" class="active">Me contacter</a></li>
+    <li><a href="mentions.html">Mentions légales</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-header fade-in">
+    <h1>Me contacter</h1>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-box fade-in">
+      <h2>Me contacter</h2>
+
+      <div class="contact-item">
+        <strong>Pour un devis</strong>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsYZMsDlrnnRX70OK2t-dtR_phX17NZog_yafFNE4o_BAM6Q/viewform?usp=header" target="_blank">Vers le Google Form !</a>
+        <small>(pas besoin de t'enregistrer avec une adresse gmail pour y répondre)</small>
+      </div>
+
+      <hr class="divider">
+
+      <div class="contact-item">
+        <strong>Message Instagram</strong>
+        <a href="https://instagram.com/ana.artaddict" target="_blank">@ana.artaddict</a>
+        <small>(tu arriveras directement sur ma page Instagram)</small>
+      </div>
+
+      <hr class="divider">
+
+      <div class="contact-item">
+        <strong>Envoi d'un mail</strong>
+        <a href="mailto:anaelleb.relectrice@gmail.com">anaelleb.relectrice@gmail.com</a>
+        <small>(là aussi, cliques sur le texte et tu arriveras directement sur la page de rédaction)</small>
+      </div>
+    </div>
+
+    <div class="offre-box fade-in">
+      <h2>Offre du moment</h2>
+      <p>Si tu as besoin d'une bêta-lecture professionnelle, que tu n'oses pas parce que ça reste un budget ou toute autre raison valable, et que tu préfères voir comment je fonctionne avant de t'engager :</p>
+      <p><strong>Je propose d'analyser tes premiers chapitres afin de te faire un retour avec la même méthode que si tu décidais de me faire confiance en pro.</strong></p>
+      <p>Pour me faire part de ce souhait, je te laisse remplir ce formulaire : <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsYZMsDlrnnRX70OK2t-dtR_phX17NZog_yafFNE4o_BAM6Q/viewform?usp=header" target="_blank">google form →</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2024 Anaëlle Bouquet EI · <a href="mailto:anaelleb.relectrice@gmail.com">anaelleb.relectrice@gmail.com</a></p>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } }), {threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
