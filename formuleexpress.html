@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formule de coaching · par une bêta-lectrice & alpha-lectrice</title>
+<meta name="description" content="Pour palier au blocage et aux prises de tête de l'écrivain, une formule d'aide à l'écriture à partir de 50 euros.">
+<meta property="og:title" content="Formule de coaching · par une bêta-lectrice & alpha-lectrice">
+<meta property="og:description" content="Pour palier au blocage et aux prises de tête de l'écrivain, une formule d'aide à l'écriture à partir de 50 euros.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .express-intro {
+    max-width: 680px;
+    margin-bottom: 3rem;
+  }
+
+  .express-contact-bubble {
+    display: inline-block;
+    background: var(--bleu);
+    border-radius: 50px;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: var(--noir);
+    margin-bottom: 2.5rem;
+    transition: all 0.25s;
+  }
+  .express-contact-bubble:hover {
+    background: var(--bleu-fonce);
+    color: var(--blanc);
+  }
+
+  /* ── LAYOUT : options en ligne, calendrier en dessous ── */
+  .options-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── BULLES D'OPTIONS ── */
+  .option-card {
+    background: var(--bleu-clair);
+    border-radius: 16px;
+    padding: 1.75rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .option-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .option-questions {
+    font-size: 0.8rem;
+    line-height: 1.75;
+    color: var(--gris);
+    margin-bottom: 0;
+  }
+
+  .option-highlight {
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-align: center;
+    color: var(--noir);
+    margin-bottom: 0;
+  }
+
+  .option-subtitle {
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    color: var(--noir);
+    margin-bottom: -0.3rem;
+  }
+
+  .option-detail p {
+    font-size: 0.78rem;
+    line-height: 1.7;
+    color: var(--gris);
+    margin-bottom: 0.65rem;
+  }
+  .option-detail p:last-child { margin-bottom: 0; }
+
+  .option-divider {
+    border: none;
+    border-top: 1px solid rgba(143,170,184,0.5);
+    margin: 0.25rem 0;
+  }
+
+  .option-price {
+    background: var(--blanc);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: auto;
+  }
+
+  /* ── CARTE CALENDRIER ── */
+  .express-card {
+    background: var(--bleu-clair);
+    border-radius: 18px;
+    padding: 2.5rem;
+  }
+
+  .express-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1.75rem;
+  }
+
+  #inline-widget-anaelle-relectrice-reserver-un-creneau {
+    background: var(--blanc);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 650px;
+  }
+
+  @media (max-width: 820px) {
+    .options-row { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .express-card { padding: 1.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Anaëlle · <span>Relectrice</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="formules.html">Formules</a></li>
+    <li><a href="formuleexpress.html" class="active">Formule Express</a></li>
+    <li><a href="avis.html">Avis</a></li>
+    <li><a href="contact.html">Me contacter</a></li>
+    <li><a href="mentions.html">Mentions légales</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-header fade-in">
+    <h1>Formule Express</h1>
+  </div>
+
+  <p class="express-intro fade-in">
+  <p>Parfois, la bêta-lecture n'est pas nécessaire ; le blocage ou la prise de tête est là bien avant.<p>
+  <b>Voici trois accompagnements que je propose. Du simple brainstorming à un suivi un peu plus long, je ne compte pas te laisser te prendre la tête seul·e.</b>
+  <p>Choisis l'option qui te correspond, puis réserve directement ton créneau via le tableau tout en bas.<p>
+  <p>Et si tu n'es pas sûr·e de ce qui te conviendrait, on en parle avant. Tu as tous les liens sur la page de contact !<p>
+  </p>
+
+  <a href="contact.html" class="express-contact-bubble fade-in">Pour accéder à cette dernière, tu peux le faire en cliquant ici.</a>
+
+  <div class="options-row">
+    <!-- Option 1 -->
+    <div class="option-card fade-in">
+      <h3 class="option-title">Un petit brainstorming ?</h3>
+      <p class="option-questions">
+        Tu sais ce qui bloque/ne va pas, mais ça ne veut pas dire que tu sais comment t'en sortir ?<br>
+        Tu as besoin d'un brainstorming et de conseils en conséquence ?<br>
+        Tu n'as pas besoin d'un accompagnement sur la durée ?
+      </p>
+      <p class="option-highlight">Cette formule est la meilleure pour toi !</p>
+      <p class="option-subtitle">Au programme :</p>
+      <div class="option-detail">
+        <p>✒️ ta mission : m'envoyer en amont notes et commentaires pour m'expliquer ce qui bloque/te pose souci afin que je les étudie. Si tu en as. Sinon on étudie tout ensemble.<br>-&gt; tu pourras envoyer ça en réponse au mail dont je parle dans le point en-dessous de celui-ci.</p>
+        <p>✒️ dès réception de ta demande de créneau (pas de panique s'il n'arrive pas tout de suite, je le fais dès que je le vois), je t'envoie le fameux e-mail avec un formulaire à remplir en 2 minutes top chrono (pour que je puisse établir ton devis et la facture), puis un second avec le lien vers le moyen de paiement choisis.</p>
+        <p>✒️ paperasse terminée ! Lors de notre appel (30 à 60 min en visio ou téléphone), je réponds à tes questions (directes) et interrogations (celles liées aux notes) et te donne des conseils sur mesure.</p>
+        <p>✒️ on prend un petit temps et je t'écoute si tu as des remarques ou d'autres questions.</p>
+        <p>✒️ tu auras, après le rendez-vous, un résumé écrit de ce que l'on s'est dit.</p>
+        <p>✒️ le brainstorming a fonctionné ? Super !<br>Ce n'est pas le cas ? On se refait un appel (cette fois gratuit) pour chercher plus loin.</p>
+      </div>
+      <div class="option-price">50€</div>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="option-card fade-in">
+      <h3 class="option-title">On trouve ce qui bloque ?</h3>
+      <p class="option-questions">
+        Tu ne sais pas ce qui bloque et tu ne sais pas du tout comment t'en sortir ?<br>
+        Tu as besoin de quelqu'un pour trouver ce qui ne va pas et pour te conseiller en conséquence ?<br>
+        Tu n'as pas besoin d'un accompagnement sur la durée ?
+      </p>
+      <p class="option-highlight">Cette alternative te conviendra mieux !</p>
+      <p class="option-subtitle">Au programme :</p>
+      <div class="option-detail">
+        <p>✒️ comme pour l'option précédente, avant notre appel, tu auras un mail avec un formulaire à remplir en 2 minutes top chrono pour que je puisse établir ton devis et la facture, puis le lien vers le moyen de paiement choisis.</p>
+        <p>✒️ on passe aux choses sérieuses, et au moment de notre appel (60 à 90 min ; visio ou téléphone, tu as le choix à la réservation du rendez-vous), c'est le moment du vrai brainstorming (avec quelques questions que j'aurais à te poser).</p>
+        <p>✒️ sur la fin, je t'écoute si tu as la moindre remarque ou le moindre doute.</p>
+        <p>✒️ après, tu auras un mail avec le résumé de notre séance.</p>
+        <p>✒️ le brainstorming a fonctionné ? Super !<br>Dans le cas contraire ? On se refait un appel (gratuit) pour chercher plus loin.</p>
+      </div>
+      <div class="option-price">125€ (3/4x sans frais possible)</div>
+    </div>
+
+    <!-- Option 3 -->
+    <div class="option-card fade-in">
+      <h3 class="option-title">On trouve et on agit !</h3>
+      <p class="option-questions">
+        Tu ne sais pas ce qui bloque et tu ne sais pas quoi faire ?<br>
+        Tu as besoin de quelqu'un pour t'aider à pointer du doigt ce qui ne va pas et avoir des conseils en conséquence ?<br>
+        Tu aimerais un accompagnement un peu plus long ?
+      </p>
+      <p class="option-highlight">Cette option est parfaite, alors !</p>
+      <p class="option-subtitle">Au programme :</p>
+      <div class="option-detail">
+        <p>✒️ exactement les mêmes choses que pour la précédente (nommée : <em>On trouve ce qui bloque ?</em>).</p>
+        <p>🗓️ pour l'après brainstorming, tu peux demander à ce que je t'établisse un planning sur 2 à 4 semaines maximum. Si tu le fais, je noterai tes obligations générales (notamment) pendant notre appel, pour l'établir au mieux de mon côté.</p>
+        <p>✒️ en plus du résumé écrit, je t'envoie ensuite le planning que je t'aurai établi.</p>
+        <hr class="option-divider">
+        <p>Pendant un mois, je suis disponible pour 1 appel/semaine et voir comment tu t'en sors !</p>
+      </div>
+      <div class="option-price">250€ (3/4x sans frais possible)</div>
+    </div>
+  </div>
+
+  <!-- Calendrier -->
+  <div class="express-card fade-in">
+    <h2>Réserve ton créneau</h2>
+
+    <!-- Koalendar Inline Embed Start -->
+    <div id="inline-widget-anaelle-relectrice-reserver-un-creneau"></div>
+    <script>window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};</script>
+    <script async src="https://koalendar.com/assets/widget.js"></script>
+    <script>Koalendar('inline', {"url":"https://koalendar.com/e/anaelle-relectrice-reserver-un-creneau","selector":"#inline-widget-anaelle-relectrice-reserver-un-creneau"});</script>
+    <!-- Koalendar Inline Embed End -->
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Anaëlle Bouquet EI · <a href="mailto:contact@anaellebetalecture.fr">contact@anaellebetalecture.fr</a></p>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } }), {threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
